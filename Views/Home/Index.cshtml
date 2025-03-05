@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Image</h1>
+
+        @if (ViewData["Message"] != null)
+        {
+            <p style="color: green;">@ViewData["Message"]</p>
+        }
+
+        <form method="post" enctype="multipart/form-data" asp-action="Upload">
+            <div class="upload-box">
+                <input type="file" name="uploadedImage" id="uploadedImage" accept="image/*" required>
+                <label for="uploadedImage">Choose an Image</label>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
