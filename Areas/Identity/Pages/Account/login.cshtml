@@ -1,0 +1,45 @@
+﻿@model Tob.Areas.Identity.Pages.Account.RegisterModel
+@{
+    Layout = null; // diables the defalult layout
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/formlogin.css">
+</head>
+<body>
+    <main class="main-w3layouts wrapper">
+        <header>
+            <h1>Tob Login</h1>
+        </header>
+
+        <section class="main-agileinfo">
+            <div class="agileits-top">
+                <form method="post" action="#" novalidate>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input id="email" class="text email" type="email" asp-for="Input.Email" placeholder="Email" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Password</label>
+                        <input id="password" class="text" type="password" asp-for="Input.Password" placeholder="Password" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password" class="sr-only">Confirm Password</label>
+                        <input id="confirm-password" class="text w3lpass" type="password" asp-for="Input.ConfirmPassword" placeholder="Confirm Password" required aria-required="true">
+                    </div>
+                    <button type="submit">LOGIN</button>
+                </form>
+
+                <p>Don't have an account? <a href="./Register">Register Now!</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
